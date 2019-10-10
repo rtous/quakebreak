@@ -1,0 +1,17 @@
+python util_bigsfile2sfiles.py --bigsfile_path input/datos5/arrival_times.txt --output_path  input/datos5/sfiles_nordicformat
+
+
+python step0_preprocess0_metadata.py \
+--input_path input/datos5/sfiles_nordicformat \
+--output_path output/data_prep_datos5/catalog.json
+
+
+1984 1022 2102 23.2 LE 69.330 27.440 11.0F NAO 34 5.2 3.8LNAO 4.0BPDE 3.2SISC1
+
+grep -e "2019 \|2019-\|BAUV HZ\|BENV HZ\|MAPV HZ\|TACV HZ\|^[[:space:]]*$" select.out > arrival_times_v2.txt
+grep -e "2019 \|2019-\|EP\|^[[:space:]]*$" select.out > arrival_times_v2.txt
+
+
+grep 2019- select.out | wc -l
+
+176
