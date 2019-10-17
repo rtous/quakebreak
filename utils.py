@@ -9,25 +9,25 @@
 Common functions.
 """
 import os
-import setproctitle
+#import setproctitle
 import numpy as np
-from quakenet.data_pipeline import DataWriter
+#from quakenet.data_pipeline import DataWriter
 import tensorflow as tf
 from obspy.core import read
-from quakenet.data_io import load_catalog
+#from quakenet.data_io import load_catalog
 from obspy.core.utcdatetime import UTCDateTime
 import fnmatch
 import json
 import argparse
-from tqdm import tqdm
+#from tqdm import tqdm
 import time
 import pandas as pd
-import seisobs #https://github.com/d-chambers/seisobs
+#import seisobs #https://github.com/d-chambers/seisobs
 import config as config
 import matplotlib.pyplot as plt
 import obspy
 import datetime as dt
-from openquake.hazardlib.geo.geodetic import distance
+#from openquake.hazardlib.geo.geodetic import distance
 import sys
 
 def preprocess_stream(stream):
